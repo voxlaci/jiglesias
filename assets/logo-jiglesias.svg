@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 150" role="img" aria-labelledby="title desc">
+  <title id="title">J. Iglesias</title>
+  <desc id="desc">Logotipo atualizado J. Iglesias com assinatura automóvel</desc>
+  <defs>
+    <linearGradient id="plate" x1="32" y1="22" x2="328" y2="128" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset="1" stop-color="#dfefff"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="76" y1="44" x2="286" y2="106" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d3a74"/>
+      <stop offset=".55" stop-color="#1768b7"/>
+      <stop offset="1" stop-color="#54aaff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-25%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="9" stdDeviation="8" flood-color="#102f55" flood-opacity=".22"/>
+    </filter>
+  </defs>
+  <rect x="24" y="22" width="312" height="106" rx="18" fill="url(#plate)" stroke="#102f55" stroke-width="5" filter="url(#shadow)"/>
+  <path d="M53 54h44l10-13h145l12 13h42" fill="none" stroke="#102f55" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M73 82c16-24 45-36 91-36h35c37 0 66 12 87 36" fill="none" stroke="url(#blue)" stroke-width="9" stroke-linecap="round"/>
+  <path d="M91 84h176c14 0 24 8 29 20H63c5-12 15-20 28-20Z" fill="#102f55"/>
+  <circle cx="113" cy="104" r="12" fill="#fff" stroke="#102f55" stroke-width="5"/>
+  <circle cx="248" cy="104" r="12" fill="#fff" stroke="#102f55" stroke-width="5"/>
+  <path d="M137 76h84" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".9"/>
+  <text x="180" y="74" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="35" font-weight="900" fill="#102f55" letter-spacing=".5">J. IGLESIAS</text>
+  <text x="180" y="119" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="800" fill="#e24d2e" letter-spacing="2.3">CENTRO AUTOMOVEL</text>
+  <path d="M41 134h278" stroke="#102f55" stroke-width="4" stroke-linecap="round"/>
+  <path d="M63 134h18m16 0h18m16 0h18m16 0h18m16 0h18m16 0h18m16 0h18" stroke="#54aaff" stroke-width="4" stroke-linecap="round"/>
+</svg>

@@ -41,7 +41,7 @@ a { color: inherit; text-decoration: none; }
   backdrop-filter: blur(16px);
 }
 
-.brand img { width: 132px; height: auto; }
+.brand img { width: 154px; height: auto; }
 
 .main-nav {
   display: flex;
@@ -503,8 +503,10 @@ footer {
 }
 
 footer img {
-  width: 118px;
-  filter: brightness(0) invert(1);
+  width: 146px;
+  padding: 4px;
+  background: var(--white);
+  border-radius: 6px;
 }
 
 footer p { margin: 0; }
@@ -546,7 +548,7 @@ footer p { margin: 0; }
     padding-inline: 16px;
     gap: 12px;
   }
-  .brand img { width: 108px; }
+  .brand img { width: 116px; }
   .header-cta {
     min-height: 38px;
     padding: 0 10px;
