@@ -301,30 +301,53 @@ h2 {
   color: var(--white);
 }
 
-.vehicle-grid {
+.vehicle-carousel {
+  position: relative;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: 46px minmax(0, 1fr) 46px;
+  gap: 12px;
+  align-items: center;
+}
+
+.vehicle-viewport {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.vehicle-viewport::-webkit-scrollbar { display: none; }
+
+.vehicle-grid {
+  --vehicle-gap: 16px;
+  display: flex;
+  gap: var(--vehicle-gap);
+  align-items: stretch;
 }
 
 .vehicle-card {
+  flex: 0 0 calc((100% - (var(--vehicle-gap) * 3)) / 4);
+  min-width: 0;
   overflow: hidden;
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: 0 10px 28px rgba(18, 23, 33, .08);
+  scroll-snap-align: start;
 }
 
 .vehicle-card[hidden] { display: none; }
 
 .vehicle-card img {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 3;
+  max-height: 132px;
   object-fit: cover;
   background: #e8eef5;
 }
 
-.vehicle-body { padding: 18px; }
+.vehicle-body { padding: 14px; }
 
 .badge {
   display: inline-flex;
@@ -342,15 +365,15 @@ h2 {
 .badge.green { background: rgba(67, 181, 107, .16); color: #1b6d3b; }
 
 .vehicle-card h3 {
-  min-height: 54px;
-  margin: 14px 0 10px;
-  font-size: 20px;
+  min-height: 46px;
+  margin: 11px 0 8px;
+  font-size: 17px;
   line-height: 1.25;
 }
 
 .price {
-  margin: 0 0 16px;
-  font-size: 26px;
+  margin: 0 0 12px;
+  font-size: 21px;
   font-weight: 900;
   color: var(--red);
 }
@@ -377,6 +400,30 @@ dt {
 dd {
   margin: 4px 0 0;
   font-weight: 800;
+}
+
+.carousel-arrow {
+  width: 46px;
+  height: 46px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--ink);
+  font-size: 22px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(18, 23, 33, .1);
+}
+
+.carousel-arrow:hover,
+.carousel-arrow:focus-visible {
+  background: var(--blue-deep);
+  color: var(--white);
+}
+
+.carousel-arrow:disabled {
+  cursor: default;
+  opacity: .35;
 }
 
 .ligier-band {
@@ -536,8 +583,8 @@ footer p { margin: 0; }
   .finance,
   .contact { grid-template-columns: 1fr; }
   .trust-strip,
-  .vehicle-grid,
   .service-grid { grid-template-columns: repeat(2, 1fr); }
+  .vehicle-card { flex-basis: calc((100% - var(--vehicle-gap)) / 2); }
   .section-heading { align-items: start; flex-direction: column; }
   .hero-content { padding-bottom: 250px; }
 }
@@ -567,9 +614,18 @@ footer p { margin: 0; }
     bottom: 24px;
   }
   .trust-strip,
-  .vehicle-grid,
   .service-grid,
   .model-stack { grid-template-columns: 1fr; }
+  .vehicle-carousel {
+    grid-template-columns: 38px minmax(0, 1fr) 38px;
+    gap: 8px;
+  }
+  .vehicle-card { flex-basis: 100%; }
+  .carousel-arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
   .section,
   .ligier-band,
   .finance { padding: 64px 16px; }
