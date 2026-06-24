@@ -1,34 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 150" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 150" role="img" aria-labelledby="title desc">
   <title id="title">J. Iglesias</title>
-  <desc id="desc">Logotipo premium J. Iglesias com assinatura automóvel minimalista</desc>
+  <desc id="desc">Logotipo J. Iglesias com monograma J e silhueta automovel premium</desc>
   <defs>
-    <linearGradient id="road" x1="38" y1="96" x2="196" y2="35" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#ff2f2f"/>
-      <stop offset=".55" stop-color="#ffffff"/>
-      <stop offset="1" stop-color="#6fc3ff"/>
-    </linearGradient>
-    <linearGradient id="word" x1="220" y1="52" x2="524" y2="52" gradientUnits="userSpaceOnUse">
+    <linearGradient id="metal" x1="72" y1="20" x2="560" y2="120" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#ffffff"/>
-      <stop offset=".7" stop-color="#f4f7fb"/>
-      <stop offset="1" stop-color="#aeb7c4"/>
+      <stop offset=".5" stop-color="#dfe5ec"/>
+      <stop offset="1" stop-color="#8c98a6"/>
     </linearGradient>
-    <filter id="aura" x="-20%" y="-50%" width="140%" height="200%">
-      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#ff2f2f" flood-opacity=".28"/>
+    <linearGradient id="flare" x1="34" y1="104" x2="193" y2="104" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff3030" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#ff3030"/>
+      <stop offset="1" stop-color="#ff3030" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-15%" y="-45%" width="130%" height="190%">
+      <feDropShadow dx="0" dy="0" stdDeviation="3.5" flood-color="#ffffff" flood-opacity=".2"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#ff3030" flood-opacity=".18"/>
     </filter>
   </defs>
 
-  <g filter="url(#aura)">
-    <path d="M36 101C70 59 113 39 164 41c22 1 42 7 60 17" fill="none" stroke="url(#road)" stroke-width="9" stroke-linecap="round"/>
-    <path d="M61 105c28-30 61-45 99-45 21 0 40 5 58 16" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity=".62"/>
-    <path d="M111 116 143 35" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
-    <path d="M160 116V46" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
-    <path d="M110 116h55" stroke="#ff2f2f" stroke-width="7" stroke-linecap="round"/>
+  <g filter="url(#glow)">
+    <path d="M40 101h153" stroke="url(#flare)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M55 78c21-22 45-33 72-33h28c17 0 31 7 43 21l22 25" fill="none" stroke="url(#metal)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M74 91h118" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" opacity=".72"/>
+    <circle cx="88" cy="96" r="9" fill="none" stroke="#dfe5ec" stroke-width="4"/>
+    <circle cx="174" cy="96" r="9" fill="none" stroke="#dfe5ec" stroke-width="4"/>
+    <path d="M126 33v55c0 21-15 34-38 34-16 0-28-5-37-15" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round"/>
+    <path d="M126 33h34" stroke="#ff3030" stroke-width="8" stroke-linecap="round"/>
   </g>
 
   <g>
-    <text x="226" y="75" font-family="Inter, Arial, sans-serif" font-size="45" font-weight="700" fill="url(#word)" letter-spacing="8">JIGLESIAS</text>
-    <text x="230" y="105" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="800" fill="#aeb7c4" letter-spacing="5.8">AUTOMOTIVE EXPERIENCE</text>
-    <path d="M230 120h226" stroke="#ff2f2f" stroke-width="3" stroke-linecap="round"/>
-    <path d="M470 120h36" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+    <text x="242" y="77" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="760" fill="url(#metal)" letter-spacing="7">JIGLESIAS</text>
+    <text x="246" y="106" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="800" fill="#b6c0cc" letter-spacing="5.4">CENTRO AUTOMOVEL</text>
+    <path d="M246 121h185" stroke="#ff3030" stroke-width="3.2" stroke-linecap="round"/>
+    <path d="M446 121h58" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round" opacity=".62"/>
   </g>
 </svg>
