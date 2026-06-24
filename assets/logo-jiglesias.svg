@@ -41,7 +41,6 @@
     <path d="M260 107h266" stroke="#ff2525" stroke-width="5" stroke-linecap="round" opacity=".95"/>
     <path d="M315 101h32M388 101h42M474 101h56M566 97h32" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity=".86"/>
     <path d="M250 94h210M496 91h41" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity=".34"/>
-    <text x="254" y="122" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="900" fill="#b5c0cc" letter-spacing="5.8">CENTRO AUTOMOVEL</text>
   </g>
 
   <path d="M594 78h48l-20 16h-48z" fill="#ff2525" opacity=".92"/>
