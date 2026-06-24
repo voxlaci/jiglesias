@@ -1,60 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 180" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 150" role="img" aria-labelledby="title desc">
   <title id="title">J. Iglesias</title>
-  <desc id="desc">Logotipo dinâmico J. Iglesias com emblema de velocidade e linha automóvel</desc>
+  <desc id="desc">Logotipo minimalista J. Iglesias com monograma automóvel próprio</desc>
   <defs>
-    <linearGradient id="redline" x1="40" y1="30" x2="470" y2="150" gradientUnits="userSpaceOnUse">
+    <linearGradient id="markLine" x1="95" y1="18" x2="95" y2="132" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".54" stop-color="#f3f7ff"/>
+      <stop offset="1" stop-color="#aeb7c4"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="20" y1="120" x2="490" y2="120" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#ff2f2f"/>
-      <stop offset=".45" stop-color="#ff6454"/>
-      <stop offset="1" stop-color="#d9ff5b"/>
+      <stop offset=".52" stop-color="#ff2f2f"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".15"/>
     </linearGradient>
-    <linearGradient id="ice" x1="120" y1="20" x2="400" y2="160" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#f8fbff"/>
-      <stop offset=".48" stop-color="#6fc3ff"/>
-      <stop offset="1" stop-color="#ffffff"/>
-    </linearGradient>
-    <radialGradient id="core" cx="50%" cy="50%" r="65%">
-      <stop offset="0" stop-color="#1c2635"/>
-      <stop offset=".72" stop-color="#090b10"/>
-      <stop offset="1" stop-color="#020305"/>
-    </radialGradient>
-    <filter id="glow" x="-30%" y="-45%" width="160%" height="190%">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
-      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 1  0 0.22 0 0 0.1  0 0 0.12 0 0.1  0 0 0 .75 0" result="redGlow"/>
-      <feMerge>
-        <feMergeNode in="redGlow"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <filter id="softShadow" x="-20%" y="-30%" width="140%" height="160%">
-      <feDropShadow dx="0" dy="16" stdDeviation="12" flood-color="#000000" flood-opacity=".5"/>
+    <filter id="cleanGlow" x="-30%" y="-40%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="3.5" flood-color="#ff2f2f" flood-opacity=".38"/>
     </filter>
   </defs>
 
-  <g filter="url(#softShadow)">
-    <path d="M34 95 88 28h342l56 67-56 57H88Z" fill="url(#core)" stroke="rgba(255,255,255,.25)" stroke-width="3"/>
-    <path d="M52 95 98 43h322l43 52-43 42H98Z" fill="none" stroke="url(#redline)" stroke-width="4" filter="url(#glow)"/>
-    <path d="M33 95H8" stroke="#ff2f2f" stroke-width="7" stroke-linecap="round"/>
-    <path d="M511 95h-46" stroke="#d9ff5b" stroke-width="7" stroke-linecap="round"/>
-  </g>
-
-  <g filter="url(#glow)">
-    <path d="M98 76c33-29 80-43 141-43h38c52 0 91 15 119 43" fill="none" stroke="url(#ice)" stroke-width="8" stroke-linecap="round"/>
-    <path d="M112 94h271c24 0 42 10 53 29H66c11-19 26-29 46-29Z" fill="#f8fbff" opacity=".94"/>
-    <path d="M153 92h153" stroke="#08101a" stroke-width="8" stroke-linecap="round" opacity=".9"/>
-    <circle cx="145" cy="123" r="15" fill="#05070b" stroke="#ff2f2f" stroke-width="6"/>
-    <circle cx="362" cy="123" r="15" fill="#05070b" stroke="#6fc3ff" stroke-width="6"/>
+  <g filter="url(#cleanGlow)">
+    <path d="M96 19 49 49h34v59c0 15-7 25-22 31h38c22-9 33-26 33-51V49h33Z" fill="url(#markLine)"/>
+    <path d="M151 38h34v101h-34Z" fill="#ffffff"/>
+    <path d="M49 49 96 19l69 30" fill="none" stroke="#ff2f2f" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M46 121h144" stroke="#ff2f2f" stroke-width="5" stroke-linecap="round"/>
   </g>
 
   <g>
-    <text x="258" y="88" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="900" fill="#ffffff" letter-spacing="2">JIGLESIAS</text>
-    <text x="258" y="117" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="900" fill="#d9ff5b" letter-spacing="5">CINEMATIC AUTO HOUSE</text>
-    <path d="M91 146h330" stroke="url(#redline)" stroke-width="5" stroke-linecap="round" filter="url(#glow)"/>
-    <path d="M129 28 72 152" stroke="rgba(255,255,255,.18)" stroke-width="2"/>
-    <path d="M448 28 391 152" stroke="rgba(255,255,255,.18)" stroke-width="2"/>
-  </g>
-
-  <g opacity=".9">
-    <text x="84" y="85" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="900" fill="#ff2f2f">J</text>
-    <text x="431" y="85" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="900" fill="#6fc3ff">I</text>
+    <text x="230" y="72" font-family="Inter, Arial, sans-serif" font-size="43" font-weight="800" fill="#ffffff" letter-spacing="7">JIGLESIAS</text>
+    <text x="233" y="104" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="800" fill="#aeb7c4" letter-spacing="5">CENTRO AUTOMOVEL</text>
+    <path d="M232 120h235" stroke="url(#accent)" stroke-width="4" stroke-linecap="round"/>
+    <path d="M477 120h18" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity=".72"/>
   </g>
 </svg>
