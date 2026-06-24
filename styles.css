@@ -1013,6 +1013,22 @@ body::before {
   box-shadow: 0 0 26px rgba(111,195,255,.36);
 }
 
+.button.ai-button::before,
+.vehicle-actions button[data-ask-ai]::before {
+  content: "✦";
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: #06101b;
+  color: var(--ice);
+  font-size: 11px;
+  line-height: 1;
+  box-shadow: 0 0 16px rgba(111,195,255,.58);
+}
+
 .search-panel {
   bottom: 52px;
   background: rgba(8, 10, 14, .78);
@@ -1146,6 +1162,9 @@ dl div { border-top-color: rgba(255,255,255,.13); }
 }
 
 .vehicle-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: rgba(255,255,255,.08);
   border-color: rgba(255,255,255,.16);
   color: var(--white);
