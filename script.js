@@ -19,6 +19,7 @@ const shareLinks = document.querySelector("[data-share-links]");
 const shareFeedback = document.querySelector("[data-share-feedback]");
 const copyShare = document.querySelector("[data-copy-share]");
 let currentLanguage = "pt";
+let activeAskButton = null;
 let activeShare = null;
 
 const translations = {
@@ -94,14 +95,14 @@ const translations = {
     "contact.title": "Pronto para visita, chamada ou pedido de informação.",
     "contact.map": "Abrir mapa",
     "footer.text": "Proposta visual de renovação. Conteúdo baseado no site atual jiglesias.com.",
-    "ai.askPage": "Ask AI",
-    "ai.askVehicle": "Ask AI",
+    "ai.askPage": "Perguntar à IA",
+    "ai.askVehicle": "Perguntar à IA",
     "ai.eyebrow": "Assistente inteligente",
     "ai.questionLabel": "Pergunta",
     "ai.placeholder": "Ex.: Este veículo é indicado para cidade?",
     "ai.send": "Enviar pergunta",
-    "ai.pageTitle": "Ask AI sobre a JIglesias",
-    "ai.vehicleTitle": "Ask AI sobre {title}",
+    "ai.pageTitle": "Perguntar à IA sobre a JIglesias",
+    "ai.vehicleTitle": "Perguntar à IA sobre {title}",
     "ai.pageIntro": "Posso ajudar a escolher entre novos, usados, microcarros, financiamento e visita ao stand.",
     "ai.vehicleIntro": "Resumo rápido: {title}, preço {price}, dados essenciais visíveis no card.",
     "ai.suggestion": "Sugestão: confirme disponibilidade, condições de financiamento e possibilidade de retoma antes da visita.",
@@ -282,14 +283,14 @@ const translations = {
     "contact.title": "Listo para visita, llamada o solicitud de información.",
     "contact.map": "Abrir mapa",
     "footer.text": "Propuesta visual de renovación. Contenido basado en el sitio actual jiglesias.com.",
-    "ai.askPage": "Ask AI",
-    "ai.askVehicle": "Ask AI",
+    "ai.askPage": "Preguntar a la IA",
+    "ai.askVehicle": "Preguntar a la IA",
     "ai.eyebrow": "Asistente inteligente",
     "ai.questionLabel": "Pregunta",
     "ai.placeholder": "Ej.: ¿Este vehículo es adecuado para ciudad?",
     "ai.send": "Enviar pregunta",
-    "ai.pageTitle": "Ask AI sobre JIglesias",
-    "ai.vehicleTitle": "Ask AI sobre {title}",
+    "ai.pageTitle": "Preguntar a la IA sobre JIglesias",
+    "ai.vehicleTitle": "Preguntar a la IA sobre {title}",
     "ai.pageIntro": "Puedo ayudar a elegir entre nuevos, usados, microcoches, financiación y visita al stand.",
     "ai.vehicleIntro": "Resumen rápido: {title}, precio {price}, datos esenciales visibles en la tarjeta.",
     "ai.suggestion": "Sugerencia: confirme disponibilidad, condiciones de financiación y opciones de entrega antes de la visita.",
@@ -376,14 +377,14 @@ const translations = {
     "contact.title": "Prêt pour une visite, un appel ou une demande d’information.",
     "contact.map": "Ouvrir la carte",
     "footer.text": "Proposition visuelle de refonte. Contenu basé sur le site actuel jiglesias.com.",
-    "ai.askPage": "Ask AI",
-    "ai.askVehicle": "Ask AI",
+    "ai.askPage": "Demander à l’IA",
+    "ai.askVehicle": "Demander à l’IA",
     "ai.eyebrow": "Assistant intelligent",
     "ai.questionLabel": "Question",
     "ai.placeholder": "Ex. : ce véhicule est-il adapté à la ville ?",
     "ai.send": "Envoyer la question",
-    "ai.pageTitle": "Ask AI sur JIglesias",
-    "ai.vehicleTitle": "Ask AI sur {title}",
+    "ai.pageTitle": "Demander à l’IA sur JIglesias",
+    "ai.vehicleTitle": "Demander à l’IA sur {title}",
     "ai.pageIntro": "Je peux aider à choisir entre neuf, occasion, microvoitures, financement et visite au showroom.",
     "ai.vehicleIntro": "Résumé rapide : {title}, prix {price}, informations essentielles visibles sur la carte.",
     "ai.suggestion": "Suggestion : confirmez la disponibilité, les conditions de financement et les options de reprise avant la visite.",
@@ -421,6 +422,9 @@ function setLanguage(language) {
     button.classList.toggle("active", button.dataset.lang === language);
   });
   window.localStorage.setItem("jiglesias-language", language);
+  if (activeAskButton && aiDrawer && !aiDrawer.hidden) {
+    renderAskAI(getVehicleData(activeAskButton));
+  }
   updateCarouselButtons();
 }
 
@@ -453,8 +457,7 @@ function getVehicleData(button) {
   };
 }
 
-function openAskAI(button) {
-  const data = getVehicleData(button);
+function renderAskAI(data) {
   const isVehicle = data.type === "vehicle";
   aiTitle.textContent = isVehicle ? t("ai.vehicleTitle", data) : t("ai.pageTitle");
   aiResponse.innerHTML = `
@@ -462,6 +465,11 @@ function openAskAI(button) {
     ${data.details ? `<p>${data.details}</p>` : ""}
     <p>${t("ai.suggestion")}</p>
   `;
+}
+
+function openAskAI(button) {
+  activeAskButton = button;
+  renderAskAI(getVehicleData(button));
   aiInput.value = "";
   aiDrawer.hidden = false;
   aiInput.focus();
@@ -575,12 +583,16 @@ shareButtons.forEach((button) => {
 });
 document.querySelector("[data-ai-close]")?.addEventListener("click", () => {
   aiDrawer.hidden = true;
+  activeAskButton = null;
 });
 document.querySelector("[data-share-close]")?.addEventListener("click", () => {
   shareDrawer.hidden = true;
 });
 aiDrawer?.addEventListener("click", (event) => {
-  if (event.target === aiDrawer) aiDrawer.hidden = true;
+  if (event.target === aiDrawer) {
+    aiDrawer.hidden = true;
+    activeAskButton = null;
+  }
 });
 shareDrawer?.addEventListener("click", (event) => {
   if (event.target === shareDrawer) shareDrawer.hidden = true;
