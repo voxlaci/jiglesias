@@ -13,16 +13,6 @@
       <stop offset=".45" stop-color="#ff2323"/>
       <stop offset="1" stop-color="#ff8a00"/>
     </linearGradient>
-    <linearGradient id="roadFill" x1="246" y1="92" x2="622" y2="138" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#212a35"/>
-      <stop offset=".42" stop-color="#07090d"/>
-      <stop offset="1" stop-color="#2b3542"/>
-    </linearGradient>
-    <linearGradient id="motionFade" x1="245" y1="132" x2="640" y2="132" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#ffffff" stop-opacity=".08"/>
-      <stop offset=".5" stop-color="#ffffff" stop-opacity=".55"/>
-      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
-    </linearGradient>
     <filter id="nightGlow" x="-20%" y="-45%" width="140%" height="190%">
       <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#ffffff" flood-opacity=".22"/>
       <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#ff2525" flood-opacity=".24"/>
@@ -41,8 +31,6 @@
 
   <g transform="skewX(-9)">
     <text x="250" y="82" font-family="Inter, Arial Black, Arial, sans-serif" font-size="50" font-weight="900" fill="url(#steel)" letter-spacing="5">JIGLESIAS</text>
-    <path d="M254 94h210l174 47H238z" fill="url(#roadFill)" opacity=".98"/>
     <path d="M360 103l-34 31M420 103l-10 35M482 105l26 33" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity=".96"/>
-    <path d="M250 136h330" stroke="url(#motionFade)" stroke-width="6" stroke-linecap="round"/>
   </g>
 </svg>
