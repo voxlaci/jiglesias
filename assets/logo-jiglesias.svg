@@ -13,6 +13,12 @@
       <stop offset=".45" stop-color="#ff2323"/>
       <stop offset="1" stop-color="#ff8a00"/>
     </linearGradient>
+    <linearGradient id="roadGlow" x1="244" y1="103" x2="635" y2="103" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff2525" stop-opacity=".95"/>
+      <stop offset=".44" stop-color="#ffffff" stop-opacity=".9"/>
+      <stop offset=".76" stop-color="#ff2525" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#ff2525" stop-opacity="0"/>
+    </linearGradient>
     <filter id="nightGlow" x="-20%" y="-45%" width="140%" height="190%">
       <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#ffffff" flood-opacity=".22"/>
       <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#ff2525" flood-opacity=".24"/>
@@ -31,10 +37,13 @@
 
   <g transform="skewX(-9)">
     <text x="250" y="82" font-family="Inter, Arial Black, Arial, sans-serif" font-size="50" font-weight="900" fill="url(#steel)" letter-spacing="5">JIGLESIAS</text>
-    <path d="M253 95h256l26-16" fill="none" stroke="#ff2525" stroke-width="5" stroke-linecap="round"/>
+    <path d="M248 101h250l75-22h42l-77 34H252z" fill="#05070a" stroke="url(#roadGlow)" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M260 107h266" stroke="#ff2525" stroke-width="5" stroke-linecap="round" opacity=".95"/>
+    <path d="M315 101h32M388 101h42M474 101h56M566 97h32" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity=".86"/>
+    <path d="M250 94h210M496 91h41" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity=".34"/>
     <text x="254" y="122" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="900" fill="#b5c0cc" letter-spacing="5.8">CENTRO AUTOMOVEL</text>
   </g>
 
-  <path d="M584 79h48l-20 16h-48z" fill="#ff2525" opacity=".92"/>
-  <path d="M619 79h27l-20 16h-27z" fill="#ffffff" opacity=".72"/>
+  <path d="M594 78h48l-20 16h-48z" fill="#ff2525" opacity=".92"/>
+  <path d="M629 78h27l-20 16h-27z" fill="#ffffff" opacity=".72"/>
 </svg>
