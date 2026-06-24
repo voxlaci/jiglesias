@@ -42,8 +42,7 @@
   <g transform="skewX(-9)">
     <text x="250" y="82" font-family="Inter, Arial Black, Arial, sans-serif" font-size="50" font-weight="900" fill="url(#steel)" letter-spacing="5">JIGLESIAS</text>
     <path d="M254 94h210l174 47H238z" fill="url(#roadFill)" opacity=".98"/>
-    <path d="M361 102l-37 32M401 102l-19 34M438 103l-2 35M476 104l19 34" stroke="#ffffff" stroke-width="4.2" stroke-linecap="round" opacity=".92"/>
-    <path d="M283 114h52M366 116h68M475 119h96" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round" opacity=".28"/>
+    <path d="M360 103l-34 31M420 103l-10 35M482 105l26 33" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity=".96"/>
     <path d="M250 136h330" stroke="url(#motionFade)" stroke-width="6" stroke-linecap="round"/>
   </g>
 </svg>
