@@ -13,15 +13,20 @@
       <stop offset=".45" stop-color="#ff2323"/>
       <stop offset="1" stop-color="#ff8a00"/>
     </linearGradient>
-    <linearGradient id="roadFill" x1="250" y1="95" x2="630" y2="126" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#111820"/>
-      <stop offset=".58" stop-color="#07090d"/>
-      <stop offset="1" stop-color="#1b222d"/>
+    <linearGradient id="roadFill" x1="246" y1="92" x2="622" y2="138" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#212a35"/>
+      <stop offset=".42" stop-color="#07090d"/>
+      <stop offset="1" stop-color="#2b3542"/>
     </linearGradient>
-    <linearGradient id="roadEdge" x1="244" y1="116" x2="640" y2="116" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#ff2525"/>
-      <stop offset=".7" stop-color="#ff2525"/>
-      <stop offset="1" stop-color="#ff2525" stop-opacity="0"/>
+    <linearGradient id="roadEdge" x1="246" y1="116" x2="642" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".25"/>
+      <stop offset=".55" stop-color="#ffffff" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".15"/>
+    </linearGradient>
+    <linearGradient id="motionFade" x1="245" y1="132" x2="640" y2="132" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".08"/>
+      <stop offset=".5" stop-color="#ffffff" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
     <filter id="nightGlow" x="-20%" y="-45%" width="140%" height="190%">
       <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#ffffff" flood-opacity=".22"/>
@@ -41,9 +46,10 @@
 
   <g transform="skewX(-9)">
     <text x="250" y="82" font-family="Inter, Arial Black, Arial, sans-serif" font-size="50" font-weight="900" fill="url(#steel)" letter-spacing="5">JIGLESIAS</text>
-    <path d="M250 96h256l128 38H244z" fill="url(#roadFill)" stroke="#ffffff" stroke-width="2" stroke-linejoin="round" opacity=".98"/>
-    <path d="M252 97h252M246 132h384" stroke="url(#roadEdge)" stroke-width="5" stroke-linecap="round"/>
-    <path d="M378 103l-17 23M425 104l-9 24M474 105l1 23M526 107l12 22" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity=".95"/>
-    <path d="M292 115h46M372 115h56M464 116h70" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity=".32"/>
+    <path d="M254 94h210l174 47H238z" fill="url(#roadFill)" stroke="#dce4ed" stroke-width="2.2" stroke-linejoin="round" opacity=".98"/>
+    <path d="M254 94 238 141M464 94l174 47" stroke="url(#roadEdge)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M361 102l-37 32M401 102l-19 34M438 103l-2 35M476 104l19 34" stroke="#ffffff" stroke-width="4.2" stroke-linecap="round" opacity=".92"/>
+    <path d="M283 114h52M366 116h68M475 119h96" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round" opacity=".28"/>
+    <path d="M250 136h330" stroke="url(#motionFade)" stroke-width="6" stroke-linecap="round"/>
   </g>
 </svg>
