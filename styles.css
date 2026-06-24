@@ -711,10 +711,11 @@ footer {
 }
 
 footer img {
-  width: 146px;
-  padding: 4px;
-  background: var(--white);
-  border-radius: 6px;
+  width: 190px;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  filter: drop-shadow(0 0 18px rgba(255,47,47,.26));
 }
 
 footer p { margin: 0; }
@@ -845,10 +846,11 @@ body::before {
 }
 
 .brand img {
-  width: 168px;
-  padding: 4px;
-  border-radius: 6px;
-  background: rgba(255,255,255,.92);
+  width: 194px;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  filter: drop-shadow(0 0 18px rgba(255,47,47,.28));
 }
 
 .main-nav { color: rgba(255,255,255,.74); }
@@ -1229,7 +1231,7 @@ footer {
     height: 128px;
   }
 
-  .brand img { width: 124px; }
+  .brand img { width: 142px; }
 
   .main-nav { top: 128px; }
 
