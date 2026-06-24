@@ -846,7 +846,7 @@ body::before {
 }
 
 .brand img {
-  width: 176px;
+  width: 205px;
   padding: 0;
   border-radius: 0;
   background: transparent;
@@ -1231,7 +1231,7 @@ footer {
     height: 128px;
   }
 
-  .brand img { width: 132px; }
+  .brand img { width: 148px; }
 
   .main-nav { top: 128px; }
 
