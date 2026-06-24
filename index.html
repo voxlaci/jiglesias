@@ -16,12 +16,18 @@
         <img src="assets/logo-jiglesias.svg" alt="J. Iglesias Centro Automóvel">
       </a>
       <nav class="main-nav" aria-label="Navegacao principal">
-        <a href="#stock">Stock</a>
+        <a href="#stock" data-i18n="nav.stock">Stock</a>
         <a href="#ligier">Ligier</a>
-        <a href="#servicos">Servicos</a>
-        <a href="#financiamento">Financiamento</a>
-        <a href="#contactos">Contactos</a>
+        <a href="#servicos" data-i18n="nav.services">Serviços</a>
+        <a href="#financiamento" data-i18n="nav.finance">Financiamento</a>
+        <a href="#contactos" data-i18n="nav.contacts">Contactos</a>
       </nav>
+      <div class="language-switch" aria-label="Selecionar idioma">
+        <button class="active" type="button" data-lang="pt">PT</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="es">ES</button>
+        <button type="button" data-lang="fr">FR</button>
+      </div>
       <a class="header-cta" href="tel:+351214443936">+351 214 443 936</a>
       <button class="menu-toggle" type="button" data-menu-toggle aria-label="Abrir menu">
         <span></span><span></span>
@@ -35,145 +41,145 @@
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-          <p class="eyebrow">Stand automóvel em São Domingos de Rana</p>
+          <p class="eyebrow" data-i18n="hero.eyebrow">Stand automóvel em São Domingos de Rana</p>
           <h1 id="hero-title">JIglesias</h1>
-          <p class="hero-lead">Uma experiência mais rápida, elegante e orientada para contactos qualificados, com stock novo, usado e microcarros Ligier prontos a descobrir.</p>
+          <p class="hero-lead" data-i18n="hero.lead">Uma experiência mais rápida, elegante e orientada para contactos qualificados, com stock novo, usado e microcarros Ligier prontos a descobrir.</p>
           <div class="hero-actions">
-            <a class="button primary" href="#stock">Ver viaturas</a>
-            <a class="button ghost" href="#contactos">Falar com a equipa</a>
+            <a class="button primary" href="#stock" data-i18n="hero.primary">Ver viaturas</a>
+            <a class="button ghost" href="#contactos" data-i18n="hero.secondary">Falar com a equipa</a>
           </div>
         </div>
 
         <form class="search-panel" aria-label="Pesquisa rapida de viaturas">
           <label>
-            <span>Tipo</span>
+            <span data-i18n="search.type">Tipo</span>
             <select>
-              <option>Todos</option>
-              <option>Automóveis</option>
+              <option data-i18n="search.all">Todos</option>
+              <option data-i18n="search.cars">Automóveis</option>
               <option>Microcarros</option>
-              <option>Autocaravanas</option>
+              <option data-i18n="search.motorhomes">Autocaravanas</option>
             </select>
           </label>
           <label>
-            <span>Estado</span>
+            <span data-i18n="search.condition">Estado</span>
             <select>
-              <option>Novos e usados</option>
-              <option>Novo</option>
-              <option>Usado</option>
+              <option data-i18n="search.newUsed">Novos e usados</option>
+              <option data-i18n="stock.newSingular">Novo</option>
+              <option data-i18n="stock.usedSingular">Usado</option>
             </select>
           </label>
           <label>
-            <span>Orcamento</span>
+            <span data-i18n="search.budget">Orçamento</span>
             <select>
-              <option>Qualquer preco</option>
-              <option>Até 15.000 EUR</option>
-              <option>15.000 a 25.000 EUR</option>
-              <option>Mais de 25.000 EUR</option>
+              <option data-i18n="search.anyPrice">Qualquer preço</option>
+              <option data-i18n="search.until15">Até 15.000 EUR</option>
+              <option data-i18n="search.from15to25">15.000 a 25.000 EUR</option>
+              <option data-i18n="search.more25">Mais de 25.000 EUR</option>
             </select>
           </label>
-          <button type="button">Procurar</button>
+          <button type="button" data-i18n="search.submit">Procurar</button>
         </form>
       </section>
 
       <section class="trust-strip" aria-label="Indicadores">
-        <div><strong>Novos</strong><span>Ligier, Microcar e seleção pronta entrega</span></div>
-        <div><strong>Usados</strong><span>Stock validado com dados essenciais visíveis</span></div>
-        <div><strong>Financiamento</strong><span>Simulação e acompanhamento comercial</span></div>
-        <div><strong>Contacto direto</strong><span>Telefone, email e visita ao stand</span></div>
+        <div><strong data-i18n="trust.new">Novos</strong><span data-i18n="trust.newText">Ligier, Microcar e seleção pronta entrega</span></div>
+        <div><strong data-i18n="trust.used">Usados</strong><span data-i18n="trust.usedText">Stock validado com dados essenciais visíveis</span></div>
+        <div><strong data-i18n="trust.finance">Financiamento</strong><span data-i18n="trust.financeText">Simulação e acompanhamento comercial</span></div>
+        <div><strong data-i18n="trust.contact">Contacto direto</strong><span data-i18n="trust.contactText">Telefone, email e visita ao stand</span></div>
       </section>
 
       <section class="section intro">
         <div>
-          <p class="eyebrow">Proposta de renovação</p>
-          <h2>Do catálogo tradicional para uma experiência de compra mais confiante.</h2>
+          <p class="eyebrow" data-i18n="intro.eyebrow">Proposta de renovação</p>
+          <h2 data-i18n="intro.title">Do catálogo tradicional para uma experiência de compra mais confiante.</h2>
         </div>
-        <p>A nova abordagem dá prioridade ao que um cliente precisa decidir: imagem forte da viatura, preço, ano, quilometragem, combustível, chamada para contacto e percursos separados para novos, usados, microcarros e serviços.</p>
+        <p data-i18n="intro.text">A nova abordagem dá prioridade ao que um cliente precisa decidir: imagem forte da viatura, preço, ano, quilometragem, combustível, chamada para contacto e percursos separados para novos, usados, microcarros e serviços.</p>
       </section>
 
       <section class="section stock-section" id="stock">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Escolhas da semana</p>
-            <h2>Viaturas em destaque</h2>
+            <p class="eyebrow" data-i18n="stock.eyebrow">Escolhas da semana</p>
+            <h2 data-i18n="stock.title">Viaturas em destaque</h2>
           </div>
           <div class="filter-tabs" role="tablist" aria-label="Filtros de stock">
-            <button class="active" type="button" data-filter="all">Todas</button>
-            <button type="button" data-filter="novo">Novos</button>
-            <button type="button" data-filter="usado">Usados</button>
+            <button class="active" type="button" data-filter="all" data-i18n="stock.all">Todas</button>
+            <button type="button" data-filter="novo" data-i18n="trust.new">Novos</button>
+            <button type="button" data-filter="usado" data-i18n="trust.used">Usados</button>
             <button type="button" data-filter="ligier">Ligier</button>
           </div>
         </div>
 
         <div class="vehicle-carousel" aria-label="Viaturas em destaque">
-          <button class="carousel-arrow carousel-arrow--prev" type="button" data-carousel-prev aria-label="Ver viaturas anteriores">&lt;</button>
+          <button class="carousel-arrow carousel-arrow--prev" type="button" data-carousel-prev aria-label="Ver viaturas anteriores" data-i18n-aria="stock.prev">&lt;</button>
           <div class="vehicle-viewport" data-vehicle-viewport>
             <div class="vehicle-grid">
               <article class="vehicle-card" data-kind="usado">
                 <img src="https://jiglesias.com/wp-content/uploads/2024/04/download-31-335x186.jpeg" alt="Fiat Ducato Pilote 716P Essentiel">
                 <div class="vehicle-body">
-                  <span class="badge">Destaque</span>
+                  <span class="badge" data-i18n="stock.featured">Destaque</span>
                   <h3>Fiat Ducato Pilote 716P Essentiel</h3>
                   <p class="price">66.500 EUR</p>
-                  <dl><div><dt>Ano</dt><dd>2017</dd></div><div><dt>Km</dt><dd>115.000</dd></div><div><dt>Comb.</dt><dd>Diesel</dd></div></dl>
+                  <dl><div><dt data-i18n="vehicle.year">Ano</dt><dd>2017</dd></div><div><dt>Km</dt><dd>115.000</dd></div><div><dt data-i18n="vehicle.fuel">Comb.</dt><dd>Diesel</dd></div></dl>
                 </div>
               </article>
               <article class="vehicle-card" data-kind="usado">
                 <img src="https://jiglesias.com/wp-content/uploads/2024/04/download-7-19-335x186.jpeg" alt="Mercedes-Benz CLA 180 D">
                 <div class="vehicle-body">
-                  <span class="badge accent">Usado</span>
+                  <span class="badge accent" data-i18n="stock.usedSingular">Usado</span>
                   <h3>Mercedes-Benz CLA 180 D</h3>
                   <p class="price">20.900 EUR</p>
-                  <dl><div><dt>Ano</dt><dd>2018</dd></div><div><dt>Km</dt><dd>78.455</dd></div><div><dt>Comb.</dt><dd>Diesel</dd></div></dl>
+                  <dl><div><dt data-i18n="vehicle.year">Ano</dt><dd>2018</dd></div><div><dt>Km</dt><dd>78.455</dd></div><div><dt data-i18n="vehicle.fuel">Comb.</dt><dd>Diesel</dd></div></dl>
                 </div>
               </article>
               <article class="vehicle-card" data-kind="novo ligier">
                 <img src="https://jiglesias.com/wp-content/uploads/2026/05/js50_2025_cima_js50-34dessus_MP_ULTIMATE3-670x372.png" alt="Ligier JS50 Ultimate">
                 <div class="vehicle-body">
-                  <span class="badge green">Novo</span>
+                  <span class="badge green" data-i18n="stock.newSingular">Novo</span>
                   <h3>Ligier JS50 Ultimate</h3>
                   <p class="price">20.990 EUR</p>
-                  <dl><div><dt>Ano</dt><dd>2026</dd></div><div><dt>Km</dt><dd>0</dd></div><div><dt>Comb.</dt><dd>Diesel</dd></div></dl>
+                  <dl><div><dt data-i18n="vehicle.year">Ano</dt><dd>2026</dd></div><div><dt>Km</dt><dd>0</dd></div><div><dt data-i18n="vehicle.fuel">Comb.</dt><dd>Diesel</dd></div></dl>
                 </div>
               </article>
               <article class="vehicle-card" data-kind="novo ligier">
                 <img src="https://jiglesias.com/wp-content/uploads/2026/05/3_4_frt-IDEAL-28-1024x683-1-670x372.png" alt="Ligier Myli Black">
                 <div class="vehicle-body">
-                  <span class="badge green">Novo</span>
+                  <span class="badge green" data-i18n="stock.newSingular">Novo</span>
                   <h3>Ligier Myli Black</h3>
                   <p class="price">15.390 EUR</p>
-                  <dl><div><dt>Ano</dt><dd>2026</dd></div><div><dt>Km</dt><dd>0</dd></div><div><dt>Comb.</dt><dd>Diesel</dd></div></dl>
+                  <dl><div><dt data-i18n="vehicle.year">Ano</dt><dd>2026</dd></div><div><dt>Km</dt><dd>0</dd></div><div><dt data-i18n="vehicle.fuel">Comb.</dt><dd>Diesel</dd></div></dl>
                 </div>
               </article>
               <article class="vehicle-card" data-kind="usado">
                 <img src="https://jiglesias.com/wp-content/uploads/2024/04/download-51-335x186.jpeg" alt="Peugeot 508 RXH 2.0 Hibrido">
                 <div class="vehicle-body">
-                  <span class="badge accent">Usado</span>
+                  <span class="badge accent" data-i18n="stock.usedSingular">Usado</span>
                   <h3>Peugeot 508 RXH 2.0 Hibrido</h3>
                   <p class="price">9.900 EUR</p>
-                  <dl><div><dt>Ano</dt><dd>2012</dd></div><div><dt>Km</dt><dd>231.300</dd></div><div><dt>Comb.</dt><dd>Diesel</dd></div></dl>
+                  <dl><div><dt data-i18n="vehicle.year">Ano</dt><dd>2012</dd></div><div><dt>Km</dt><dd>231.300</dd></div><div><dt data-i18n="vehicle.fuel">Comb.</dt><dd>Diesel</dd></div></dl>
                 </div>
               </article>
               <article class="vehicle-card" data-kind="novo ligier">
                 <img src="https://jiglesias.com/wp-content/uploads/2024/04/download-42-335x186.jpeg" alt="Ligier JS60 Chic">
                 <div class="vehicle-body">
-                  <span class="badge green">Novo</span>
+                  <span class="badge green" data-i18n="stock.newSingular">Novo</span>
                   <h3>Ligier JS60 Chic</h3>
                   <p class="price">18.939 EUR</p>
-                  <dl><div><dt>Ano</dt><dd>2026</dd></div><div><dt>Km</dt><dd>0</dd></div><div><dt>Comb.</dt><dd>Diesel</dd></div></dl>
+                  <dl><div><dt data-i18n="vehicle.year">Ano</dt><dd>2026</dd></div><div><dt>Km</dt><dd>0</dd></div><div><dt data-i18n="vehicle.fuel">Comb.</dt><dd>Diesel</dd></div></dl>
                 </div>
               </article>
             </div>
           </div>
-          <button class="carousel-arrow carousel-arrow--next" type="button" data-carousel-next aria-label="Ver mais viaturas">&gt;</button>
+          <button class="carousel-arrow carousel-arrow--next" type="button" data-carousel-next aria-label="Ver mais viaturas" data-i18n-aria="stock.next">&gt;</button>
         </div>
       </section>
 
       <section class="ligier-band" id="ligier">
         <div class="ligier-copy">
-          <p class="eyebrow">Mobilidade compacta</p>
-          <h2>Uma vitrine própria para Ligier e microcarros.</h2>
-          <p>O site renovado destaca gamas, versões e vantagens de condução urbana, criando uma área comercial mais clara para clientes que procuram alternativas compactas e económicas.</p>
-          <a class="button dark" href="#contactos">Pedir disponibilidade</a>
+          <p class="eyebrow" data-i18n="ligier.eyebrow">Mobilidade compacta</p>
+          <h2 data-i18n="ligier.title">Uma vitrine própria para Ligier e microcarros.</h2>
+          <p data-i18n="ligier.text">O site renovado destaca gamas, versões e vantagens de condução urbana, criando uma área comercial mais clara para clientes que procuram alternativas compactas e económicas.</p>
+          <a class="button dark" href="#contactos" data-i18n="ligier.cta">Pedir disponibilidade</a>
         </div>
         <div class="model-stack" aria-label="Gamas em destaque">
           <span>Myli</span>
@@ -186,36 +192,36 @@
       <section class="section services" id="servicos">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Acompanhamento completo</p>
-            <h2>Serviços pensados para converter visitas em contactos.</h2>
+            <p class="eyebrow" data-i18n="services.eyebrow">Acompanhamento completo</p>
+            <h2 data-i18n="services.title">Serviços pensados para converter visitas em contactos.</h2>
           </div>
         </div>
         <div class="service-grid">
-          <article><span>01</span><h3>Seleção assistida</h3><p>Ajuda o cliente a escolher por orçamento, tipo de utilização, estado e disponibilidade.</p></article>
-          <article><span>02</span><h3>Retoma</h3><p>Espaço para avaliação e proposta de retoma, reduzindo fricção antes da visita ao stand.</p></article>
-          <article><span>03</span><h3>Preparação e garantia</h3><p>Mensagens claras sobre inspeção, entrega e documentação para aumentar confiança.</p></article>
-          <article><span>04</span><h3>Pós-venda</h3><p>Contacto visível para manutenção, apoio e acompanhamento após compra.</p></article>
+          <article><span>01</span><h3 data-i18n="services.s1Title">Seleção assistida</h3><p data-i18n="services.s1Text">Ajuda o cliente a escolher por orçamento, tipo de utilização, estado e disponibilidade.</p></article>
+          <article><span>02</span><h3 data-i18n="services.s2Title">Retoma</h3><p data-i18n="services.s2Text">Espaço para avaliação e proposta de retoma, reduzindo fricção antes da visita ao stand.</p></article>
+          <article><span>03</span><h3 data-i18n="services.s3Title">Preparação e garantia</h3><p data-i18n="services.s3Text">Mensagens claras sobre inspeção, entrega e documentação para aumentar confiança.</p></article>
+          <article><span>04</span><h3 data-i18n="services.s4Title">Pós-venda</h3><p data-i18n="services.s4Text">Contacto visível para manutenção, apoio e acompanhamento após compra.</p></article>
         </div>
       </section>
 
       <section class="finance" id="financiamento">
         <div>
-          <p class="eyebrow">Financiamento</p>
-          <h2>Simulação simples, sem interromper a descoberta da viatura.</h2>
-          <p>O novo layout prepara o caminho para leads de financiamento com preço, entrada inicial, prazo e pedido de contacto. Nesta proposta, a área aparece como bloco comercial pronto a ligar ao formulário real.</p>
+          <p class="eyebrow" data-i18n="finance.eyebrow">Financiamento</p>
+          <h2 data-i18n="finance.title">Simulação simples, sem interromper a descoberta da viatura.</h2>
+          <p data-i18n="finance.text">O novo layout prepara o caminho para leads de financiamento com preço, entrada inicial, prazo e pedido de contacto. Nesta proposta, a área aparece como bloco comercial pronto a ligar ao formulário real.</p>
         </div>
         <form class="finance-box">
-          <label><span>Viatura</span><input value="Ligier JS50 Ultimate" aria-label="Viatura"></label>
-          <label><span>Entrada inicial</span><input value="3.500 EUR" aria-label="Entrada inicial"></label>
-          <label><span>Prazo</span><input value="72 meses" aria-label="Prazo"></label>
-          <button type="button">Pedir simulação</button>
+          <label><span data-i18n="finance.vehicle">Viatura</span><input value="Ligier JS50 Ultimate" aria-label="Viatura"></label>
+          <label><span data-i18n="finance.downPayment">Entrada inicial</span><input value="3.500 EUR" aria-label="Entrada inicial"></label>
+          <label><span data-i18n="finance.term">Prazo</span><input value="72 meses" aria-label="Prazo"></label>
+          <button type="button" data-i18n="finance.submit">Pedir simulação</button>
         </form>
       </section>
 
       <section class="section contact" id="contactos">
         <div>
-          <p class="eyebrow">Contactos</p>
-          <h2>Pronto para visita, chamada ou pedido de informação.</h2>
+          <p class="eyebrow" data-i18n="contact.eyebrow">Contactos</p>
+          <h2 data-i18n="contact.title">Pronto para visita, chamada ou pedido de informação.</h2>
           <address>
             <strong>JIglesias</strong><br>
             R. Maria Matos - Edifício Iglesias, 15<br>
@@ -225,14 +231,14 @@
         <div class="contact-actions">
           <a href="tel:+351214443936">+351 214 443 936</a>
           <a href="mailto:jiglesias@jiglesias.com">jiglesias@jiglesias.com</a>
-          <a href="https://maps.google.com/maps?q=R.%20Maria%20Matos%2015%202785-591%20S%C3%A3o%20Domingos%20de%20Rana" target="_blank" rel="noreferrer">Abrir mapa</a>
+          <a href="https://maps.google.com/maps?q=R.%20Maria%20Matos%2015%202785-591%20S%C3%A3o%20Domingos%20de%20Rana" target="_blank" rel="noreferrer" data-i18n="contact.map">Abrir mapa</a>
         </div>
       </section>
     </main>
 
     <footer>
       <img src="assets/logo-jiglesias.svg" alt="J. Iglesias Centro Automóvel">
-      <p>Proposta visual de renovação. Conteúdo baseado no site atual jiglesias.com.</p>
+      <p data-i18n="footer.text">Proposta visual de renovação. Conteúdo baseado no site atual jiglesias.com.</p>
     </footer>
 
     <script src="script.js"></script>

@@ -32,9 +32,9 @@ a { color: inherit; text-decoration: none; }
   z-index: 20;
   height: 82px;
   display: grid;
-  grid-template-columns: auto 1fr auto auto;
+  grid-template-columns: auto 1fr auto auto auto;
   align-items: center;
-  gap: 28px;
+  gap: 18px;
   padding: 14px clamp(18px, 4vw, 54px);
   background: rgba(255, 255, 255, .9);
   border-bottom: 1px solid rgba(220, 227, 236, .75);
@@ -54,6 +54,33 @@ a { color: inherit; text-decoration: none; }
 
 .main-nav a { padding: 12px 0; }
 .main-nav a:hover { color: var(--blue); }
+
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--white);
+}
+
+.language-switch button {
+  min-width: 34px;
+  height: 30px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.language-switch button.active {
+  background: var(--blue-deep);
+  color: var(--white);
+}
 
 .header-cta {
   display: inline-flex;
@@ -559,7 +586,7 @@ footer img {
 footer p { margin: 0; }
 
 @media (max-width: 980px) {
-  .site-header { grid-template-columns: auto 1fr auto; }
+  .site-header { grid-template-columns: auto 1fr auto auto; }
   .main-nav {
     position: fixed;
     top: 82px;
@@ -591,20 +618,30 @@ footer p { margin: 0; }
 
 @media (max-width: 640px) {
   .site-header {
-    height: 72px;
+    height: 124px;
     padding-inline: 16px;
     gap: 12px;
   }
   .brand img { width: 116px; }
+  .language-switch {
+    order: 5;
+    grid-column: 1 / -1;
+    justify-self: stretch;
+    justify-content: center;
+  }
+  .language-switch button {
+    flex: 1;
+    min-width: 0;
+  }
   .header-cta {
     min-height: 38px;
     padding: 0 10px;
     font-size: 13px;
   }
-  .main-nav { top: 72px; }
+  .main-nav { top: 124px; }
   .hero {
     min-height: 940px;
-    padding: 122px 16px 24px;
+    padding: 174px 16px 24px;
   }
   .hero-content { padding-bottom: 430px; }
   .hero-actions .button { width: 100%; }
