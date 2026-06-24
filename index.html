@@ -47,6 +47,8 @@
           <div class="hero-actions">
             <a class="button primary" href="#stock" data-i18n="hero.primary">Ver viaturas</a>
             <a class="button ghost" href="#contactos" data-i18n="hero.secondary">Falar com a equipa</a>
+            <button class="button ai-button" type="button" data-ask-ai="site" data-title="JIglesias" data-i18n="ai.askPage">Ask AI</button>
+            <button class="button share-button" type="button" data-share-scope="site" data-title="JIglesias" data-i18n="share.page">Partilhar</button>
           </div>
         </div>
 
@@ -121,6 +123,10 @@
                   <h3>Fiat Ducato Pilote 716P Essentiel</h3>
                   <p class="price">66.500 EUR</p>
                   <dl><div><dt data-i18n="vehicle.year">Ano</dt><dd>2017</dd></div><div><dt>Km</dt><dd>115.000</dd></div><div><dt data-i18n="vehicle.fuel">Comb.</dt><dd>Diesel</dd></div></dl>
+                  <div class="vehicle-actions">
+                    <button type="button" data-ask-ai="vehicle" data-i18n="ai.askVehicle">Ask AI</button>
+                    <button type="button" data-share-scope="vehicle" data-i18n="share.vehicle">Partilhar</button>
+                  </div>
                 </div>
               </article>
               <article class="vehicle-card" data-kind="usado">
@@ -130,6 +136,10 @@
                   <h3>Mercedes-Benz CLA 180 D</h3>
                   <p class="price">20.900 EUR</p>
                   <dl><div><dt data-i18n="vehicle.year">Ano</dt><dd>2018</dd></div><div><dt>Km</dt><dd>78.455</dd></div><div><dt data-i18n="vehicle.fuel">Comb.</dt><dd>Diesel</dd></div></dl>
+                  <div class="vehicle-actions">
+                    <button type="button" data-ask-ai="vehicle" data-i18n="ai.askVehicle">Ask AI</button>
+                    <button type="button" data-share-scope="vehicle" data-i18n="share.vehicle">Partilhar</button>
+                  </div>
                 </div>
               </article>
               <article class="vehicle-card" data-kind="novo ligier">
@@ -139,6 +149,10 @@
                   <h3>Ligier JS50 Ultimate</h3>
                   <p class="price">20.990 EUR</p>
                   <dl><div><dt data-i18n="vehicle.year">Ano</dt><dd>2026</dd></div><div><dt>Km</dt><dd>0</dd></div><div><dt data-i18n="vehicle.fuel">Comb.</dt><dd>Diesel</dd></div></dl>
+                  <div class="vehicle-actions">
+                    <button type="button" data-ask-ai="vehicle" data-i18n="ai.askVehicle">Ask AI</button>
+                    <button type="button" data-share-scope="vehicle" data-i18n="share.vehicle">Partilhar</button>
+                  </div>
                 </div>
               </article>
               <article class="vehicle-card" data-kind="novo ligier">
@@ -148,6 +162,10 @@
                   <h3>Ligier Myli Black</h3>
                   <p class="price">15.390 EUR</p>
                   <dl><div><dt data-i18n="vehicle.year">Ano</dt><dd>2026</dd></div><div><dt>Km</dt><dd>0</dd></div><div><dt data-i18n="vehicle.fuel">Comb.</dt><dd>Diesel</dd></div></dl>
+                  <div class="vehicle-actions">
+                    <button type="button" data-ask-ai="vehicle" data-i18n="ai.askVehicle">Ask AI</button>
+                    <button type="button" data-share-scope="vehicle" data-i18n="share.vehicle">Partilhar</button>
+                  </div>
                 </div>
               </article>
               <article class="vehicle-card" data-kind="usado">
@@ -157,6 +175,10 @@
                   <h3>Peugeot 508 RXH 2.0 Hibrido</h3>
                   <p class="price">9.900 EUR</p>
                   <dl><div><dt data-i18n="vehicle.year">Ano</dt><dd>2012</dd></div><div><dt>Km</dt><dd>231.300</dd></div><div><dt data-i18n="vehicle.fuel">Comb.</dt><dd>Diesel</dd></div></dl>
+                  <div class="vehicle-actions">
+                    <button type="button" data-ask-ai="vehicle" data-i18n="ai.askVehicle">Ask AI</button>
+                    <button type="button" data-share-scope="vehicle" data-i18n="share.vehicle">Partilhar</button>
+                  </div>
                 </div>
               </article>
               <article class="vehicle-card" data-kind="novo ligier">
@@ -166,6 +188,10 @@
                   <h3>Ligier JS60 Chic</h3>
                   <p class="price">18.939 EUR</p>
                   <dl><div><dt data-i18n="vehicle.year">Ano</dt><dd>2026</dd></div><div><dt>Km</dt><dd>0</dd></div><div><dt data-i18n="vehicle.fuel">Comb.</dt><dd>Diesel</dd></div></dl>
+                  <div class="vehicle-actions">
+                    <button type="button" data-ask-ai="vehicle" data-i18n="ai.askVehicle">Ask AI</button>
+                    <button type="button" data-share-scope="vehicle" data-i18n="share.vehicle">Partilhar</button>
+                  </div>
                 </div>
               </article>
             </div>
@@ -235,6 +261,31 @@
         </div>
       </section>
     </main>
+
+    <div class="ai-drawer" data-ai-drawer hidden>
+      <div class="ai-card" role="dialog" aria-modal="true" aria-labelledby="ai-title">
+        <button class="modal-close" type="button" data-ai-close aria-label="Fechar">×</button>
+        <p class="eyebrow" data-i18n="ai.eyebrow">Assistente inteligente</p>
+        <h2 id="ai-title" data-ai-title>Ask AI</h2>
+        <div class="ai-response" data-ai-response></div>
+        <label class="ai-question">
+          <span data-i18n="ai.questionLabel">Pergunta</span>
+          <textarea data-ai-input rows="3" placeholder="Ex.: Este veículo é indicado para cidade?" data-i18n-placeholder="ai.placeholder"></textarea>
+        </label>
+        <button class="button primary" type="button" data-ai-send data-i18n="ai.send">Enviar pergunta</button>
+      </div>
+    </div>
+
+    <div class="share-drawer" data-share-drawer hidden>
+      <div class="share-card" role="dialog" aria-modal="true" aria-labelledby="share-title">
+        <button class="modal-close" type="button" data-share-close aria-label="Fechar">×</button>
+        <p class="eyebrow" data-i18n="share.eyebrow">Partilha rápida</p>
+        <h2 id="share-title" data-share-title>Partilhar</h2>
+        <div class="share-links" data-share-links></div>
+        <button class="copy-link" type="button" data-copy-share data-i18n="share.copy">Copiar link</button>
+        <p class="share-feedback" data-share-feedback aria-live="polite"></p>
+      </div>
+    </div>
 
     <footer>
       <img src="assets/logo-jiglesias.svg" alt="J. Iglesias Centro Automóvel">
